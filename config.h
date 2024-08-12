@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const int vertpad            = 10;
+static const int vertpad            = 6;
 static const int sidepad            = 6;
 static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 16;
@@ -102,6 +102,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
 	{ MODKEY,                       XK_m,      shiftview,      {.i = +1 } },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = -1 } }, 
+	{ MODKEY|ShiftMask,             XK_w,      killunsel,      {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
