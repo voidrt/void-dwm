@@ -7,10 +7,10 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const int vertpad            = 6;
+static const int vertpad            = 8;
 static const int sidepad            = 6;
 static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 16;
+static const int vertpadbar         = 14;
 static const char *fonts[]          = { "Exo:size=12", "JoyPixels:pixelsize=12:antialias=true:autohint=true"};
 static const char dmenufont[]       = "Exo:size=12";
 static char normbgcolor[]           = "#222222";
