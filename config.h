@@ -6,6 +6,7 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
+static const Bool viewontag         = True;
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int vertpad            = 8;
 static const int sidepad            = 6;
