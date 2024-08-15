@@ -8,6 +8,9 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const Bool viewontag         = True;
 static const int topbar             = 0;        /* 0 means bottom bar */
+static const double activeopacity   = 1.0f
+static const double inactiveopacity = 0.8f
+static Bool bUseOpacity             = True;
 static const int vertpad            = 8;
 static const int sidepad            = 6;
 static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
@@ -91,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_o,      toggleopacity,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
