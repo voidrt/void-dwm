@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 6;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -12,7 +12,7 @@ static const double activeopacity   = 1.0f;
 static const double inactiveopacity = 0.9f;
 static       Bool bUseOpacity       = True;
 static const int vertpad            = 8;
-static const int sidepad            = 6;
+static const int sidepad            = 64;
 static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 14;
 static const char *fonts[]          = { "Exo:size=12", "JoyPixels:pixelsize=12:antialias=true:autohint=true"};
