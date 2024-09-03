@@ -2,17 +2,17 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const Bool viewontag         = True;
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const double activeopacity   = 1.0f;
-static const double inactiveopacity = 0.9f;
-static       Bool bUseOpacity       = True;
+static const double inactiveopacity = 0.8f;
+static Bool bUseOpacity             = True;
 static const int vertpad            = 8;
-static const int sidepad            = 64;
+static const int sidepad            = 6;
 static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 14;
 static const char *fonts[]          = { "Exo:size=12", "JoyPixels:pixelsize=12:antialias=true:autohint=true"};
@@ -75,6 +75,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont};
 static const char *termcmd[]  = { "st", NULL };
 #include "shiftview.c"
+#include "movestack.c"
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
@@ -108,6 +110,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      shiftview,      {.i = +1 } },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = -1 } }, 
 	{ MODKEY|ShiftMask,             XK_w,      killunsel,      {0} },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1} },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
